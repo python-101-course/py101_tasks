@@ -8,3 +8,31 @@
 
 if __name__ == '__main__':
     pass
+
+i = list(input())
+c = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+ra = ['а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ь', 'ы', 'ъ', 'э', 'ю', 'я']
+aa = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm']
+ch = 0
+b = 0
+for j in range(len(i)):
+    if i[j] in c:
+        ch += 1
+        break
+    
+for j2 in range(len(i)):
+    if i[j2] in ra:
+        b += 1
+        break
+
+for j3 in range(len(i)):
+    if i[j3] in aa:
+        b += 1
+        break
+
+if ch + b >= 2 and ch > 0 and len(i) >= 8:
+    print('сложный')
+else:
+    print('простой')
+        
+
