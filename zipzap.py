@@ -8,5 +8,16 @@
 Тебе может понадобиться цикл for и ветвления
 """
 
+def zipzup_game():
+    zipzup_number = 0
+for zipzup_number in range(1, 100):
+        if zipzup_number % 3 == 0 and zipzup_number % 5 == 0:
+            print('zip-zap')
+        elif zipzup_number % 3 == 0:
+            print('zip')
+        elif zipzup_number % 5 == 0:
+            print('zap')        
+        else:
+            print(zipzup_number)
 if __name__ == '__main__':
-    pass
+    zipzap_game()

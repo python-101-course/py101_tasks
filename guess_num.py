@@ -5,7 +5,6 @@
 Если число меньше загаданного, то программа выводит сообщение о том, что число
 меньше
 Если больше загаданного, то программа выводит сообщение о том, что больше
-
 Программа должна выводить сообщения-предупреждения, если:
 * пользователь ввёл не число
 * число не входит в обозначенный в условии диапазон
@@ -13,6 +12,25 @@
 
 Тебе может понадобится модуль random, цикл while и ветвления
 """
+import random
+def guess_game():
+    max_number = 1000000
+
+    guess_number = random.randint(0, max_number)
+    input_number = input(f"Приветствую тебя! Давай сыграем? Введите число от 0 до 1 000 000, для прекращения игры введи 'exit' : ")
+    while input_number not in ("exit", ""):
+        if not input_number.lstrip("-").isdigit() or (input_number := int(input_number)) > max_number:
+            print("Введенное значение не соответствует заданным условиям, повторим? ")
+        else:
+            if (integer_value == random_value):
+                print(f"Угадал!")
+                break
+
+            tip = "больше" if input_number > guess_number else "меньше"
+            print(f"Введенное число {tip} загаданного числа")
+
+        input_number = input(f"Продолжим? Введите число от 0 до 1 000 000, для прекращения игры введи 'exit' : ")
 
 if __name__ == '__main__':
-    pass
+    guess_game()
+    
